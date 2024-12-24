@@ -1,3 +1,3 @@
 import streamlit as st
 
-st.title('Generic\nLanguage\nParser')
+st.title('Generic Language Parser')
