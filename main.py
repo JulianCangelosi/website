@@ -3,7 +3,6 @@ import streamlit as st
 home_page = st.Page(
     page='pages/home.py',
     title='Home Page',
-    icon=':house',
     default=True
 )
 chess_page = st.Page(
