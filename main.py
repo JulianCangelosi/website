@@ -3,6 +3,7 @@ import streamlit as st
 home_page = st.Page(
     page='pages/home.py',
     title='Home Page',
+    icon='🏠',
     default=True
 )
 chess_page = st.Page(
@@ -18,7 +19,7 @@ movies_page = st.Page(
 parser_page = st.Page(
     page='pages/parser.py',
     title='Parser',
-    icon=':materials/language',
+    icon='🌐',
 )
 
 pg = st.navigation(pages=[home_page, chess_page, movies_page, parser_page])
