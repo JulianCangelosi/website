@@ -7,8 +7,6 @@ class Pages(Enum):
     PARSER = auto()
     MOVIES = auto()
 
-st.title('Julian Cangelosi')
-
 st.sidebar.title("Navigation")
 page = st.sidebar.selectbox(
     'Go to:',
