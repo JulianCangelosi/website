@@ -1,5 +1,18 @@
 import streamlit as st
 
+st.markdown(
+    """
+    <style>
+    .css-1s3b1ll a {
+        color: white !important; /* Change navigation link color */
+        font-size: 18px;       /* Adjust font size */
+        font-weight: bold;     /* Make it bold */
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 home_page = st.Page(
     page='pages/home.py',
     title='Home Page',
