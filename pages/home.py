@@ -16,7 +16,7 @@ st.write(
 st.header(':mailbox: Contact me:')
 
 contact_form ="""
-<form action="https://formsubmit.co/jcangelosi20@georgefox.com" method="POST">
+<form action="https://formsubmit.co/jcangelosi20@georgefox.edu" method="POST">
      <input type="text" name="name" required>
      <input type="email" name="email" required>
      <button type="submit">Send</button>
