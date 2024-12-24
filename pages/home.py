@@ -1,6 +1,6 @@
 import streamlit as st
 
-@st.experimental_dialog('Contact Me')
+@st.dialog('Contact Me')
 def show_contact_form():
     st.text_input('First Name')
 
