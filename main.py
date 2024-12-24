@@ -1,24 +1,27 @@
 import streamlit as st
-from enum import Enum, auto
 
-class Pages(Enum):
-    HOME   = auto()
-    CHESS  = auto()
-    PARSER = auto()
-    MOVIES = auto()
-
-st.sidebar.title("Navigation")
-page = st.sidebar.radio(
-    'Go to:',
-    options=list(Pages),
-    format_func=lambda x: x.name.replace('_', ' ').title(),
+home_page = st.Page(
+    page='views/home.py',
+    title='Home Page',
+    icon=':material/account_circle',
+    default=True
+)
+chess_page = st.Page(
+    page='views/chess.py',
+    title='Chess Program',
+    icon='♟️',
+)
+movies_page = st.Page(
+    page='views/movies.py',
+    title='Movies Database',
+    icon='🎞️',
+)
+parser_page = st.Page(
+    page='views/parser.py',
+    title='Parser',
+    icon=':materials/language',
 )
 
-if page == Pages.HOME:
-    st.title('Home')
-elif page == Pages.CHESS:
-    st.title('Object-Oriented Chess Program (Python)')
-elif page == Pages.PARSER:
-    st.title('Generic Language Parser (Golang)')
-elif page == Pages.MOVIES:
-    st.title('Movies Relational Database')
+pg = st.navigation(pages=[home_page, chess_page, movies_page, parser_page])
+
+pg.run()
