@@ -1,8 +1,9 @@
 import streamlit as st
+from forms.contact_form import contact_form
 
 @st.dialog('Contact Me')
 def show_contact_form():
-    st.text_input('First Name')
+    contact_form()
 
 st.title('Julian Cangelosi Portfolio')
 st.subheader('Welcome to my website!')
