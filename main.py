@@ -8,7 +8,7 @@ class Pages(Enum):
     MOVIES = auto()
 
 st.sidebar.title("Navigation")
-page = st.sidebar.button(
+page = st.sidebar.radio(
     'Go to:',
     options=list(Pages),
     format_func=lambda x: x.name.replace('_', ' ').title(),
