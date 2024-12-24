@@ -1,9 +1,26 @@
 import streamlit as st
+from enum import Enum, auto
+
+class Pages(Enum):
+    HOME   = auto()
+    CHESS  = auto()
+    PARSER = auto()
+    MOVIES = auto()
 
 st.title('Julian Cangelosi')
 
+st.sidebar.title("Navigation")
+page = st.sidebar.selectbox(
+    'Go to:',
+    options=list(Pages),
+    format_func=lambda x: x.name.replace('_', ' ').title(),
+)
 
-st.button('Hello')
-st.sidebar.title("Sidebar Menu")
-st.sidebar.radio('Choose an option:', ['Option1', 'Option2', 'Option3'])
-st.sidebar.slider('Select a range', 0, 100, 50)
+if page == Pages.HOME:
+    st.title('Home')
+elif page == Pages.CHESS:
+    st.title('Object-Oriented Chess Program (Python)')
+elif page == Pages.PARSER:
+    st.title('Generic Language Parser (Golang)')
+elif page == Pages.MOVIES:
+    st.title('Movies Relational Database')
